@@ -38,7 +38,7 @@
                 <!-- <input type="submit" value="Search"> -->
                 <button type="button">Search <i class="fa fa-search"></i></button>
             </form>
-        </li class="nav-li" class="nav-li">
+        </li>
 
 		{% if not request.user.is_authenticated %}
 			<li class="nav-li" style="float:right; background-color:#67831c;"><a href="{% url 'login' %}">Login</a> </li>
@@ -75,9 +75,9 @@
 				integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 				crossorigin="anonymous"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-				integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-				crossorigin="anonymous"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"-->
+				<!--integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"-->
+				<!--crossorigin="anonymous"></script>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
 
@@ -130,36 +130,37 @@
 
 		})
 </script>
-
+<br/><br/>
 <footer class="footer"><br/><br/>
     <div class="footer-leftcolumn">
         <div class="footer-card">
-            <h3 style="margin-top: 0px; text-align: center;">Community</h3>
-                <ul>
-                    <a href='#'>Ask</a><hr/>
-                    <a href='#'>Make a Suggestion</a><hr/>
-                    <a href="#">Github</a><hr/>
-                    <a href="#">Youtube</a><hr/>
-                    <a href="#">Facebook</a><hr/>
+            <h3>Community</h3>
+                <ul class="footer-ul">
+                    <a class="a" href='#'>Ask</a>
+                    <a class="a" href='#'>Make a Suggestion</a>
+                    <a class="a" href="#">Github</a>
+                    <a class="a" href="#">Youtube</a>
+                    <a class="a" href="#">Facebook</a>
                 </ul>
         </div>
     </div>
 
     <div class="footer-rightcolumn">
         <div class="footer-card">
-            <h3 style="margin-top: 0px; text-align: center;" id="recent">Recent Posts</h3>
-            <ul>
+            <h3 id="recent">Recent Posts</h3>
+            <ul class="footer-ul">
                 {% for obj in object_list|slice:":5" %}
-                <a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><hr/>
+                <a class="a" href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a>
                 {% endfor %}
             </ul>
         </div>
     </div>
-    <div class="copyright">
-        <p style="color: white;">Designed and Developed by | <a href="#">ME</a> | with <i class='fa fa-heart'></i> from INDIA | &copy;
-            <script>document.write(new Date().getFullYear())</script> Overall Reports</p>
+    <div class="footer-center">
+        <div class="copyright">
+            <p>Designed and Developed by | <a href="#">ME</a> | with <i class='fa fa-heart'></i> from INDIA | &copy;
+                <script>document.write(new Date().getFullYear())</script> Overall Reports</p>
+        </div>
     </div>
-
 </footer>
 </body>
 </html>
