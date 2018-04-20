@@ -1,0 +1,1 @@
+A blog project based on Django Framework using python.
