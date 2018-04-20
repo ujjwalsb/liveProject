@@ -1,0 +1,20 @@
+h1{
+    color: green;
+}
+
+.wmd-panel{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.comment-reply{
+    display:none;
+}
+
+.navbar-nav{
+	float: none; !important;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+	color: #14c1f0;
+}
