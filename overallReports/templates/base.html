@@ -134,7 +134,7 @@
 <footer class="footer"><br/><br/>
     <div class="footer-leftcolumn">
         <div class="footer-card">
-            <h3>Community</h3>
+            <h3>Community</h3><hr/>
                 <ul class="footer-ul">
                     <a class="a" href='#'>Ask</a>
                     <a class="a" href='#'>Make a Suggestion</a>
@@ -147,7 +147,7 @@
 
     <div class="footer-rightcolumn">
         <div class="footer-card">
-            <h3 id="recent">Recent Posts</h3>
+            <h3 id="recent">Recent Posts</h3><hr/>
             <ul class="footer-ul">
                 {% for obj in object_list|slice:":5" %}
                 <a class="a" href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a>
