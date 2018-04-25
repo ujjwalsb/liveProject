@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 }
 
-h1{
-    color: green;
-}
-
 .wmd-panel{
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -15,8 +11,14 @@ h1{
     display:none;
 }
 
-body {
-	background: #f1f1f1;
+h1{
+    margin: 10px;
+    color: #0093ff;
+}
+
+h1::first-letter{
+    color: black;
+    font-size: 40px;
 }
 
 .nav-ul{
@@ -26,8 +28,6 @@ body {
     background-color: #13194d;
     overflow: hidden;
     border-radius:10px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
     top: 0;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .card{
-    background-color: #e0e0e0;
+    background-color: #7bff0033;
     padding: 20px;
     margin-top: 20px;
     border-radius:10px;
@@ -114,19 +114,25 @@ body {
 .footer{
 	padding: 60px;
 	text-align: center;
-	background: #87746d;
+	background: #c30dfb1a;
+	border-radius: 10px;
+	display: flex;
 }
 
 .footer-rightcolumn{
     text-align; center;
     float:right;
     width:49.5%;
+    border-radius:10px;
+    margin: 10px;
 }
 
 .footer-leftcolumn{
     text-align; center;
     float:left;
     width:49.5%;
+    border-radius:10px;
+    margin: 10px;
 }
 
 .footer-center{
@@ -138,24 +144,24 @@ body {
 
 .copyright{
     text-align; center;
-    color; white;
+    color; black;
 }
 
 .copyright a{
-    color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
 }
 
 .copyright p{
-    color: #111674;
+    color: #d000f9;
     display: block;
 }
 
 .footer-card{
     background-color: #e0e0e0;
     padding:20px;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .footer-card a{
@@ -168,4 +174,54 @@ body {
 .footer-ul{
     padding:0px;
     margin:0px;
+}
+
+a{
+    color: #ff0380;
+    text-decoration: none;
+}
+
+.form{
+    text-align: center;
+    margin: 100;
+    font-size: 15px;
+    padding: 100px 0px;
+    border: 10px solid #d4b343;
+    border-radius: 100px;
+}
+
+.form-section label{
+    font-size: 25px;
+    color: #0030ffe6;
+}
+
+.form-section br{
+
+}
+
+.form-section span{
+    color: red;
+    font-size: 15px;
+}
+
+.form-section p{
+    color: red;
+}
+
+.form-section label, .form-section input{
+    display: inline;
+}
+
+.submit{
+    background-color: #09b017;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+
 }

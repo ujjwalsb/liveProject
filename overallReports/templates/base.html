@@ -42,7 +42,7 @@
 
 		{% if not request.user.is_authenticated %}
 			<li class="nav-li" style="float:right; background-color:#67831c;"><a href="{% url 'login' %}">Login</a> </li>
-			<li style="float:right; background-color:#67831c;"><a href="{% url 'register' %}">Register</a> </li>
+			<li class="nav-li" style="float:right; background-color:#67831c;"><a href="{% url 'register' %}">Register</a> </li>
 		{% else %}
 
         <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
@@ -155,12 +155,13 @@
             </ul>
         </div>
     </div>
+    </footer>
+
     <div class="footer-center">
         <div class="copyright">
             <p>Designed and Developed by | <a href="#">ME</a> | with <i class='fa fa-heart'></i> from INDIA | &copy;
                 <script>document.write(new Date().getFullYear())</script> Overall Reports</p>
         </div>
     </div>
-</footer>
 </body>
 </html>

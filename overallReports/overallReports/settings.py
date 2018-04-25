@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'crispy_forms',
     'rest_framework',
+    'form_designer',
 
     # Local app,
     'comments',
