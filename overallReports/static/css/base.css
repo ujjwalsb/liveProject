@@ -212,6 +212,15 @@ a{
     display: inline;
 }
 
+.controls{
+    display: inline-block;
+    padding: 50px;
+}
+
+#hint_id_username{
+    display: inline-block;
+}
+
 .submit{
     background-color: #09b017;
     border: none;
@@ -225,3 +234,4 @@ a{
           box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 
 }
+
