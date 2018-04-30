@@ -11,21 +11,24 @@
 
 
 {% block content %}
-<div class="col-sm-6">
-    <h1>Preview:</h1><hr/>
-    <div class="content-title">
-        <h3 id="preview-title"></h3>
-        <p id="preview-content"></p>
+<div class="row">
+    <div class="leftcolumn">
+    	<div class="card">
+    		<h1>Preview:</h1><hr/>
+        	<h3 id="preview-title"></h3>
+        	<p id="preview-content"></p>
+    	</div>
     </div>
-</div>
-<div class="col-sm-6">
-    <h1>Post:</h1>
-<hr/>
-<form method="POST" action="" enctype="multipart/form-data">
-{% csrf_token %}
-{{ form | crispy }}
-<input type="submit" class="btn btn-primary" value="Create Post"/>
-</form>
 
+
+	<div class="rightcolumn">
+		<div class="card">
+    		<h1>Post:</h1><hr/>
+			<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+					{{ form | crispy }}
+				<input type="submit" class="btn btn-primary" value="Create Post"/>
+			</form>
+	</div>
 </div>
 {% endblock content %}
