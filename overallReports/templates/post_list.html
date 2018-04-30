@@ -39,6 +39,7 @@
             {% if obj.image %}
             <img src="{{ obj.image.url }}" class="img-responsive" />
             {% endif %}
+            <div class="Post-detail-item">
                 {% if obj.draft %}<h3>Staff only: Draft</h3>{% endif %}
                 {% if obj.publish > today %}<h3>Future Post</h3>{% endif %}
 
@@ -51,6 +52,7 @@
 
             <p>{{ obj.get_markdown | truncatechars_html:30 }} </p><br/>
             <p><a href="{{ obj.get_absolute_url }}" role="button">Read More</a></p>
+            </div>
         </div>
     </div>
 {% endfor %}

@@ -34,7 +34,7 @@ h1::first-letter{
     font-size: 40px;
 }
 
-.read-more, .reply, .post-comment{
+.read-more, .reply, .post-comment, .create-post{
     padding: 10px;
     background-color: #093ab0;
     border: none;
@@ -47,20 +47,6 @@ h1::first-letter{
           box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 
 }
-
-/*.reply {
-        padding: 10px;
-    background-color: #093ab0;
-    border: none;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 0px;
-    font-size: 15px;
-    border-radius: 10px;
-          box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
-
-}*/
 
 .nav-ul {
   text-align: left;
@@ -143,6 +129,23 @@ h1::first-letter{
 .leftcolumn{
     float: left;
     width: 65%;
+}
+
+.create-leftcolumn{
+    float: left;
+    width: 49%;
+}
+
+.create-rightcolumn{
+    float: right;
+    width: 50%;
+}
+
+.create-card{
+    background-color: #87a6e4;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius:10px;
 }
 
 .card{

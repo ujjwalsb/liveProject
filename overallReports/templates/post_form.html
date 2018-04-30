@@ -12,17 +12,19 @@
 
 {% block content %}
 <div class="row">
-    <div class="leftcolumn">
-    	<div class="card">
-    		<h1>Preview:</h1><hr/>
-        	<h3 id="preview-title"></h3>
-        	<p id="preview-content"></p>
+    <div class="create-leftcolumn">
+    	<div class="create-card">
+    		<div class="content-preview">
+    			<h1>Preview:</h1><hr/>
+        		<h3 id="preview-title" style="padding: 20px;"></h3>
+        		<p id="preview-content"></p>
+    		</div>
     	</div>
     </div>
 
 
-	<div class="rightcolumn">
-		<div class="card">
+	<div class="create-rightcolumn">
+		<div class="create-card">
     		<h1>Post:</h1><hr/>
 			<form method="POST" action="" enctype="multipart/form-data">
 				{% csrf_token %}
