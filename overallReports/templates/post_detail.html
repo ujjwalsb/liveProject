@@ -14,16 +14,17 @@
 
 
 {% block content %}
+<br style="padding: 15px;">
 <div class='col-sm-6 col-sm-offset-3'>
 	{% if instance.image %}
 	<img src="{{ instance.image.url }}" class="img-responsive" />
 	{% endif %}
-	<h1>{{title}}
+	<h2>{{title}}
         <small> {% if instance.draft %}
             <span style="color: red;">Draft</span>
             {% endif %} {{ instance.publish }}
         </small>
-    </h1>
+    </h2>
 
     <p>
         Read Time: {% if instance.read_time <= 1 %} < 1 Minute

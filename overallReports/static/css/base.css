@@ -1,5 +1,17 @@
 *{
 	box-sizing: border-box;
+    margin: 0px;
+}
+
+p{
+    margin: 15px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  height:100%;
+  background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
 }
 
 .wmd-panel{
@@ -13,7 +25,8 @@
 
 h1{
     margin: 10px;
-    color: #0093ff;
+    color: #0d29a1;
+    padding: 0px;
 }
 
 h1::first-letter{
@@ -21,7 +34,39 @@ h1::first-letter{
     font-size: 40px;
 }
 
-.nav-ul{
+.nav-ul {
+  text-align: left;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-li {
+  display: inline-block;
+}
+
+.nav-li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-li a:hover:not(.active) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+.active{
+    background-color: red;
+}
+
+/*.nav-ul{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -50,7 +95,7 @@ h1::first-letter{
 .active{
     background-color: red;
 }
-
+*/
 .header{
     padding: 10px;
     text-align: center;
@@ -69,7 +114,7 @@ h1::first-letter{
 }
 
 .card{
-    background-color: #7bff0033;
+    background-color: #87a6e4;
     padding: 20px;
     margin-top: 20px;
     border-radius:10px;
@@ -154,7 +199,7 @@ h1::first-letter{
 }
 
 .copyright p{
-    color: #d000f9;
+    color: #fff;
     display: block;
 }
 
@@ -234,4 +279,34 @@ a{
           box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 
 }
+
+
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+
 
