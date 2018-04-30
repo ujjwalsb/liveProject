@@ -34,6 +34,34 @@ h1::first-letter{
     font-size: 40px;
 }
 
+.read-more, .reply, .post-comment{
+    padding: 10px;
+    background-color: #093ab0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    font-size: 15px;
+    border-radius: 10px;
+          box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/*.reply {
+        padding: 10px;
+    background-color: #093ab0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    font-size: 15px;
+    border-radius: 10px;
+          box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+
+}*/
+
 .nav-ul {
   text-align: left;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
@@ -102,6 +130,10 @@ h1::first-letter{
     font-size: 20px;
 }
 
+.row{
+    text-align: center;
+}
+
 .row:after{
     display: table;
     clear:both;
@@ -154,6 +186,7 @@ h1::first-letter{
 
 .search{
     padding-top: 13px;
+    margin-left: 20px;
 }
 
 .footer{
@@ -280,33 +313,6 @@ a{
 
 }
 
-
-
-nav ul {
-  text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  padding: 18px;
-  font-family: "Open Sans";
-  text-transform:uppercase;
-  color: rgba(0, 35, 122, 0.5);
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
-}
-
-nav ul li a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(0, 35, 122, 0.7);
-}
 
 
 
