@@ -63,8 +63,8 @@
 					<small>-Via {{ comment.user }} |
 						{{ comment.timestamp|timesince }} ago. |
 						{% if comment.children.count > 0 %}
-							{{ comment.children.count }}
-							Comment{% if comment.children.count > 1 %}s{% endif %} |
+							<strong>{{ comment.children.count }}
+							Comment{% if comment.children.count > 1 %}s{% endif %}</strong> |
 						{% endif %}
 						<a href="#" class="comment-reply-btn">Reply</a> |
 						<a href="{{ comment.get_absolute_url }}">Thread</a>
