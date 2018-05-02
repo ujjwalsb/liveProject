@@ -31,9 +31,9 @@
 <nav>
 	<ul class="nav-ul">
 		<li class="nav-li"><a href="{% url 'posts:list' %}">Home</a> </li>
-		<li class="nav-li"><a href="{% url 'posts:list' %}">About Us</a> </li>
-		<li class="nav-li"><a href="{% url 'posts:list' %}">Services</a> </li>
-		<li class="nav-li"><a href="{% url 'posts:list' %}">Terms of use</a> </li>
+		<li class="nav-li"><a href="/about-us/">About Us</a> </li>
+		<li class="nav-li"><a href="/services/">Services</a> </li>
+		<li class="nav-li"><a href="/terms-of-use">Terms of use</a> </li>
         <li class="nav-li">
             <form class="search" method="GET" action="">
                 <input type="text" name="q" placeholder="Search..." value="{{request.GET.q}}"/>

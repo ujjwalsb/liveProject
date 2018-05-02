@@ -17,7 +17,7 @@
 <br style="padding: 15px;">
 
 <div class="row">
-	<div class='leftcolumn'>
+	<div class='leftcolumn-details'>
 		<div class="card">
 			{% if instance.image %}
 			<img src="{{ instance.image.url }}" class="img-responsive" />
@@ -96,92 +96,17 @@
 		</div>
 	</div>
 
+<!-- For youtube video --><!-- https://www.youtube.com/embed/6ZfuNTqbHE8 -->
+<!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=6ZfuNTqbHE8
+" target="_blank"><img src="http://img.youtube.com/vi/6ZfuNTqbHE8/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a> -->
 
 
 
 
 
-
-	<div class='rightcolumn'>
-		<div class="card">
-			{% if instance.image %}
-			<img src="{{ instance.image.url }}" class="img-responsive" />
-			{% endif %}
-			<h2>{{title}}
-				<small> {% if instance.draft %}
-					<span style="color: red;">Draft</span>
-					{% endif %} {{ instance.publish }}
-				</small>
-			</h2>
-			<p>Read Time: {% if instance.read_time <= 1 %} < 1 Minute
-				{% else %} {{ instance.read_time }} Minutes
-				{% endif %}</p>
-
-			{% if instance.user.get_full_name %}
-			<p>Author: {{ instance.user.get_full_name }}</p>
-			{% endif %}
+<!-- 	<div class='rightcolumn'>
+</div> -->
 
 
-			<p>
-			<div class="fb-like" data-href="{{ request.build_absolute_uri }}"
-				data-layout="button_count" data-action="like" data-size="small"
-				data-show-faces="true" data-share="true">
-			</div>
-			</p>
-			<div class="post-detail-item"> {{ instance.get_markdown }} </div>
-			<br/>
-
-			<div>
-				<p class="lead">Comments:</p>
-				{% if request.user.is_authenticated %}
-				<form method="POST" action="."> {% csrf_token %}
-					{{ comment_form | crispy }}
-					<input type="submit" value="Post Comment" class="post-comment">
-				</form>
-				{% else %}
-					<p>You must login first to comment !</p>
-				{% endif %}
-
-				{% for comment in comments %}
-				<blockquote>
-					<p>{{ comment.content }}</p>
-					<footer>Via {{ comment.user }} |
-						{{ comment.timestamp|timesince }} ago. |
-						{% if comment.children.count > 0 %}
-							{{ comment.children.count }}
-							Comment{% if comment.children.count > 1 %}s{% endif %} |
-						{% endif %}
-						<a href="#" class="comment-reply-btn">Reply</a> |
-						<a href="{{ comment.get_absolute_url }}">Thread</a>
-					</footer>
-
-					<div class="comment-reply" style="display:none;">
-						{% for child_comment in comment.children %}
-						<blockquote>
-							<p>{{ child_comment.content }}</p>
-						<footer>Via {{ child_comment.user }} |
-							{{ child_comment.timestamp|timesince }} ago.
-						</footer>
-						</blockquote>
-						{% endfor %}
-
-						{% if request.user.is_authenticated %}
-						<form method="POST" action="."> {% csrf_token %}
-							{{ comment_form | crispy }}
-							<input type="hidden", name="parent_id", value="{{ comment.id }}">
-							<input type="submit" value="Reply" class="post-comment">
-						</form>
-						{% else %}
-						<p>You must login first to comment !</p>
-						{% endif %}
-					</div>
-				</blockquote>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
-
-
-</div>
 {% endblock content %}

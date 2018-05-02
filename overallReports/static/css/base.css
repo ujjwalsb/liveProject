@@ -131,6 +131,11 @@ h1::first-letter{
     width: 65%;
 }
 
+.leftcolumn-details{
+    display: inline-block;
+    width: 80%;
+}
+
 .create-leftcolumn{
     float: left;
     width: 49%;
@@ -166,14 +171,16 @@ h1::first-letter{
 }
 
 .pagination{
-    display: inline-block;
+    display: flex;
+    margin-top: 20px;
 }
 
 .pagination a{
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 0px 16px;
     text-decoration: none;
+    margin: 0px 8px;
 }
 
 .pagination a.current {
@@ -258,7 +265,7 @@ h1::first-letter{
 }
 
 a{
-    color: #ff0380;
+    color: #a80053;
     text-decoration: none;
 }
 

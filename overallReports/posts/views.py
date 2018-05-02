@@ -20,7 +20,7 @@ def post_detail(request, slug=None):
     if instance.draft or instance.publish > timezone.now().date():
         if not request.user.is_staff or not request.user.is_superuser:
             raise Http404
-    share_string = quote_plus(instance.content)
+    # share_string = quote_plus(instance.content)
     queryset = Post.objects.all()
 
     initial_data = {
@@ -58,7 +58,7 @@ def post_detail(request, slug=None):
         "object_list":queryset,
         "title": instance.title,
         "instance": instance,
-        "share_string": share_string,
+        # "share_string": share_string,
         "comments": comments,
         "comment_form": form,
     }
@@ -147,3 +147,24 @@ def post_delete(request, slug=None):
     instance.delete()
     messages.success(request,"Successfully Deleted")
     return redirect("posts:list")
+
+
+def about_us(request):
+    context = {
+        "title": "About Us"
+    }
+    return render(request, "aboutus.html", context)
+
+
+def services(request):
+    context = {
+        "title": "Services"
+    }
+    return render(request, "services.html", context)
+
+
+def terms_of_use(request):
+    context = {
+        "title": "Terms of use"
+    }
+    return render(request, "terms-of-use.html", context)
