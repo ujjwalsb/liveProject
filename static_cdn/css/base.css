@@ -280,7 +280,7 @@ a{
 
 .form-section label{
     font-size: 25px;
-    color: #0030ffe6;
+    color: #fff;
 }
 
 .form-section br{
@@ -293,7 +293,7 @@ a{
 }
 
 .form-section p{
-    color: red;
+    color: #ffab00;
 }
 
 .form-section label, .form-section input{
