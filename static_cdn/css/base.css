@@ -77,7 +77,7 @@ h1::first-letter{
 }
 
 .active{
-    background-color: red;
+    background-color: #ea8989;
 }
 
 /*.nav-ul{
@@ -155,14 +155,14 @@ h1::first-letter{
 
 .card{
     background-color: #87a6e4;
-    padding: 20px;
+    padding-bottom: 30px;
     margin-top: 20px;
     border-radius:10px;
 }
 
 .img-responsive{
     width: 100%;
-    padding:20px;
+    padding:5px;
 }
 
 .rightcolumn{
@@ -321,6 +321,13 @@ a{
     border-radius: 10px;
           box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 
+}
+
+.textarea{
+    width: 678px;
+    height: 121px;
+    font-size: 18px;
+}
 }
 
 
