@@ -12,8 +12,9 @@
 {{ object }}
 
 <div class='row'>
-	<div class="leftcolumn">
-		<div class="card">
+	<div class="leftcolumn-details">
+		<div class="card" style="padding: 20px;">
+			<h1><u>Comment Threads:</u></h1>
 			<p><b>{{ comment.content }}</b></p>
 			<small>Via {{ comment.user }} |
 				{{ comment.timestamp|timesince }} ago.
@@ -23,8 +24,8 @@
 				{% endif %}
 				{% if request.user == comment.user %}
 				 | <a href="{{ comment.get_delete_url }}" style="font-size: 18px;"> Delete </a> {% endif %}
-			</small>
-			<hr/>
+			</small><br><br><br><br>
+			<!-- <hr/> -->
 			<div>
 				{% for child_comment in comment.children %}
 					<blockquote>
@@ -33,44 +34,6 @@
 							{{ child_comment.timestamp|timesince }} ago.
 							{% if request.user == child_comment.user %}
 							 | <a href="{{ child_comment.get_delete_url }}" style="font-size: 18px;">  Delete </a> {% endif %}
-						</small>
-					</blockquote>
-				{% endfor %}
-
-				{% if request.user.is_authenticated %}
-				<form method="POST" action="."> {% csrf_token %}
-					{{ form | crispy }}
-					<input type="hidden" name="parent_id" value="{{ comment.id }}">
-					<input type="submit" value="Reply" class="reply">
-				</form>
-				{% else %}
-					<p>You must login first to comment !</p>
-				{% endif %}
-			</div>
-		</div>
-	</div>
-
-	<div class="rightcolumn">
-		<div class="card">
-		<p><b>{{ comment.content }}</b></p>
-			<small>-Via {{ comment.user }} |
-				{{ comment.timestamp|timesince }} ago.
-				{% if comment.children.count > 0 %}
-					{{ comment.children.count }}
-					Comment{% if comment.children.count > 1 %}s{% endif %}
-				{% endif %}
-				{% if request.user == comment.user %}
-				 | <a href="{{ comment.get_delete_url }}" style="font-size: 18px;"> Delete </a> {% endif %}
-			</small>
-			<hr/>
-			<div>
-				{% for child_comment in comment.children %}
-					<blockquote>
-						<p><b>{{ child_comment.content }}</b></p>
-						<small>-Via {{ child_comment.user }} |
-							{{ child_comment.timestamp|timesince }} ago.
-							{% if request.user == child_comment.user %}
-							|<a href="{{ child_comment.get_delete_url }}" style="font-size: 18px;">   Delete </a> {% endif %}
 						</small>
 					</blockquote>
 				{% endfor %}
