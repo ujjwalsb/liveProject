@@ -10,7 +10,7 @@ p{
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
-  height:100%;
+  /*height:100%;*/
   background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
 }
 

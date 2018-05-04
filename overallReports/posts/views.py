@@ -168,3 +168,17 @@ def terms_of_use(request):
         "title": "Terms of use"
     }
     return render(request, "terms-of-use.html", context)
+
+
+def ask(request):
+    context = {
+        "title": "Ask"
+    }
+    return render(request, "ask.html", context)
+
+
+def suggestion(request):
+    context = {
+        "title": "Make a Suggestion"
+    }
+    return render(request, "suggestion.html", context)
