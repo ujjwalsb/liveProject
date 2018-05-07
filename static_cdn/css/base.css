@@ -1,19 +1,29 @@
 *{
 	box-sizing: border-box;
-    margin: 0px;
 }
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gothic A1', sans-serif;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Gothic+A1);
 
 p{
     margin: 15px;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-html {
-  /*height:100%;*/
-  background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+ul{
+    margin: 0;
+    padding: 0;
 }
-
+li{
+    margin: 0;
+    padding: 0;
+}
+.container{
+   max-width: 1250px;
+   margin: 0 auto; 
+}
 .wmd-panel{
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -22,16 +32,37 @@ html {
 .comment-reply{
     display:none;
 }
-
-h1{
-    margin: 10px;
-    color: #0d29a1;
-    padding: 0px;
+.main-header{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.menu-item{
+   /* margin-right: 20px;*/
+}
+.header-wrapper{
+  background-color: #454444;
+}
+.icon-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 30px;
+}
+.social-icons-item{
+    margin-right: 1em;
+    color: white;
 }
 
-h1::first-letter{
-    color: black;
-    font-size: 40px;
+.logo{
+    color: white;
+    padding: 0px;
 }
 
 .read-more, .reply, .post-comment, .create-post{
@@ -44,26 +75,48 @@ h1::first-letter{
     margin: 0px;
     font-size: 15px;
     border-radius: 10px;
-          box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 
 }
 
-.nav-ul {
-  text-align: left;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+.menu-container {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.nav-li {
-  display: inline-block;
+.menu-wrapper{
+    display: flex;
+    list-style: none;
+    flex-basis: 40%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3333em;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
+.login-btns{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.search{
+    border: 1px solid;
+    margin-bottom: 0;
+}
+.search-input{
+    font-size: 20px;
+}
+.search-btn{
+    font-size: 20px;
+    border: none;
+}
+
 
 .nav-li a {
   padding: 18px;
-  font-family: "Open Sans";
+  font-family: 'Gothic A1', sans-serif;
   text-transform:uppercase;
   color: rgba(0, 35, 122, 0.5);
   font-size: 18px;
@@ -119,6 +172,7 @@ h1::first-letter{
 
 .row{
     text-align: center;
+    margin-top: 180px;
 }
 
 .row:after{
@@ -133,8 +187,22 @@ h1::first-letter{
 }
 
 .leftcolumn-details{
-    display: inline-block;
-    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    /*max-width: 1250px;
+    margin: 0 auto;*/
+}
+.cards{
+    flex-basis: 60%;
+    background-color: #87a6e4;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    border-radius:10px;
+}
+.widgets{
+    width: 250px;
+    height: 300px;
+    background-color: blueviolet;
 }
 
 .create-leftcolumn{
@@ -148,15 +216,9 @@ h1::first-letter{
 }
 
 .create-card{
+    flex-basis: 60%;
     background-color: #87a6e4;
     padding: 20px;
-    margin-top: 20px;
-    border-radius:10px;
-}
-
-.card{
-    background-color: #87a6e4;
-    padding-bottom: 30px;
     margin-top: 20px;
     border-radius:10px;
 }
@@ -195,10 +257,6 @@ h1::first-letter{
     border-radius: 5px;
 }
 
-.search{
-    padding-top: 13px;
-    margin-left: 20px;
-}
 
 .footer{
 	padding: 60px;
@@ -243,7 +301,6 @@ h1::first-letter{
 }
 
 .copyright p{
-    color: #fff;
     display: block;
 }
 
@@ -329,7 +386,7 @@ a{
     height: 121px;
     font-size: 18px;
 }
-}
+
 
 
 

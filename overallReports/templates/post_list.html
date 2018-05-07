@@ -12,9 +12,10 @@
 <br style="padding: 50px;">
 
 <div class="row">
+    <button class="create-post-btn"><i class="fa fa-plus"></i></button>
 {% for obj in object_list %}
     <div class="leftcolumn-details">
-        <div class="card">
+        <div class="cards">
             {% if obj.image %}
             <img src="{{ obj.image.url }}" class="img-responsive" />
             {% endif %}
@@ -32,14 +33,12 @@
             <p>{{ obj.get_markdown | truncatechars_html:30 }} </p><br/>
             <p><a href="{{ obj.get_absolute_url }}" class="read-more">Read More...</a></p>
         </div>
+        <div class="widgets">300*600 ad widget</div>
     </div>
 {% endfor %}
 </div>
 
-
-
-
-<div class="leftcolumn-details">
+<div class="rightcolumn-details">
     <span class="pagination" style="padding-left: 20px">
         {% if object_list.has_previous %}
         <a href="?page=1">&laquo; first</a>

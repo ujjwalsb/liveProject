@@ -48,25 +48,39 @@
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<h1>OVERALL REPORTS</h1>
+<div class="main-header">
+  <div class="header-wrapper">
+  <div class="icon-header-wrapper container">
+    <h1 class="logo">OVERALL REPORTS</h1>
+    <ul class="social-icons">
+      <li class="social-icons-item"><i class="fa fa-facebook"></i></li>
+      <li class="social-icons-item"><i class="fa fa-instagram"></i></li>
+      <li class="social-icons-item"><i class="fa fa-twitter"></i></li>
+      <li class="social-icons-item"><i class="fa fa-google-plus"></i></li>
 
-<nav>
-	<ul class="nav-ul">
-		<li class="nav-li"><a href="{% url 'posts:list' %}">Home</a> </li>
-		<li class="nav-li"><a href="/about-us/">About Us</a> </li>
-		<li class="nav-li"><a href="/services/">Services</a> </li>
-		<li class="nav-li"><a href="/terms-of-use">Terms of use</a> </li>
+    </ul>
+</div>
+</div>
+<div class="main-menu">
+<nav class="menu-container container">
+	<ul class="menu-wrapper">
+		<li class="menu-item"><a href="{% url 'posts:list' %}">Home</a> </li>
+		<li class="menu-item"><a href="/about-us/">About Us</a> </li>
+		<li class="menu-item"><a href="/services/">Services</a> </li>
+		<li class="menu-item"><a href="/terms-of-use">Terms of use</a> </li>
+  </ul>
+    <ul class="login-btns">
         <li class="nav-li">
             <form class="search" method="GET" action="">
-                <input type="text" name="q" placeholder="Search..." value="{{request.GET.q}}"/>
+                <input  class="search-input" type="text" name="q" placeholder="Search..." value="{{request.GET.q}}"/>
                 <!-- <input type="submit" value="Search"> -->
-                <button type="button">Search <i class="fa fa-search"></i></button>
+                <button class="search-btn" type="button"><i class="fa fa-search"></i></button>
             </form>
         </li>
 
 		{% if not request.user.is_authenticated %}
-			<li class="nav-li" style="float:right; background-color:#67831c;"><a href="{% url 'login' %}">Login</a> </li>
-			<li class="nav-li" style="float:right; background-color:#67831c;"><a href="{% url 'register' %}">Register</a> </li>
+			<li class="nav-li"><a href="{% url 'login' %}">Login</a> </li>
+			<li class="nav-li"><a href="{% url 'register' %}">Register</a> </li>
 		{% else %}
 
         <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
@@ -79,6 +93,8 @@
 
 	</ul>
 </nav>
+</div>
+</div>
 
 <!--{% if not request.user.is_authenticated %}-->
 	<!--<p><a href="/register/" role="button" style="margin-right: 10px;">Become a Member</a></p>-->
@@ -155,7 +171,7 @@
 		})
 </script>
 <br/><br/>
-<footer class="footer"><br/><br/>
+<footer class="footer">
     <div class="footer-leftcolumn">
         <div class="footer-card">
             <h3>Community</h3><hr/>
