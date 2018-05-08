@@ -27,18 +27,18 @@ li {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
 .create-post-btn {
-  padding: 20px;
+  padding: 15px;
   margin-left: 20px;
   background-color: #52b788;
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 26px;
+  font-size: 15px;
   border-radius: 40px;
   box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -74,7 +74,7 @@ li {
 .icon-header-wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 1500px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -82,7 +82,7 @@ li {
   display: flex;
   align-items: center;
   list-style: none;
-  font-size: 30px;
+  font-size: 1em;
 }
 
 .social-icons-item {
@@ -124,7 +124,7 @@ li {
   flex-basis: 40%;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.3333em;
+  font-size: 1em;
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -136,19 +136,23 @@ li {
 }
 
 .search {
-  border: 1px solid;
   margin-bottom: 0;
 }
 
 .search-input {
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .search-btn {
   padding: 6px;
-  font-size: 20px;
-  border: none;
+  font-size: 1em;
+  border: 1px solid #25cede;
   background: none;
+  border-radius: 20px;
+}
+.content-wrapper{
+  text-align: center;
+  padding: 15px;
 }
 
 
@@ -157,7 +161,7 @@ li {
   font-family: 'Gothic A1', sans-serif;
   text-transform: uppercase;
   color: lightslategray;
-  font-size: 18px;
+  font-size: 1em;
   text-decoration: none;
   display: block;
 }
@@ -174,36 +178,6 @@ li {
 
 
 
-/*.nav-ul{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    background-color: #13194d;
-    overflow: hidden;
-    border-radius:10px;
-    top: 0;
-}
-
-.nav-li{
-    float: left;
-}
-
-.nav-li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px 18px;
-    text-decoration: none;
-}
-
-.nav-li a:hover:not(.active) {
-    background-color: #0f98ef;
-}
-
-.active{
-    background-color: red;
-}
-*/
 
 .header {
   padding: 10px;
@@ -229,7 +203,7 @@ li {
 .leftcolumn-details {
   display: flex;
   justify-content: space-between;
-  max-width: 1500px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -305,7 +279,6 @@ li {
   padding: 60px;
   text-align: center;
   background: #25cede;
-  border-radius: 10px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -361,7 +334,7 @@ li {
 }
 
 .footer-card a {
-  font-size: 1.2em;
+  font-size: 1em;
   display: block;
   text-align: center;
   padding: 16px;
