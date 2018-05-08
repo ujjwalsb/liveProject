@@ -58,6 +58,7 @@ li {
   position: fixed;
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  top: 0;
 }
 
 .menu-item {
@@ -193,7 +194,8 @@ li {
 }
 
 .row {
-  margin-top: 160px;
+  transform: translateY(140px);
+  z-index: -1000;
 }
 
 .row:after {
