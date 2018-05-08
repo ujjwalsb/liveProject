@@ -53,10 +53,10 @@
   <div class="icon-header-wrapper container">
     <h1 class="logo">OVERALL REPORTS</h1>
     <ul class="social-icons">
-      <li class="social-icons-item"><i class="fa fa-facebook"></i></li>
-      <li class="social-icons-item"><i class="fa fa-instagram"></i></li>
-      <li class="social-icons-item"><i class="fa fa-twitter"></i></li>
-      <li class="social-icons-item"><i class="fa fa-google-plus"></i></li>
+      <li class="social-icons-item"><a href="#" class="social"><i class="fa fa-facebook"></i></a></li>
+      <li class="social-icons-item"><a href="#" class="social"><i class="fa fa-instagram"></i></a></li>
+      <li class="social-icons-item"><a href="#" class="social"><i class="fa fa-twitter"></i></a></li>
+      <li class="social-icons-item"><a href="#" class="social"><i class="fa fa-google-plus"></i></a></li>
 
     </ul>
 </div>
@@ -82,11 +82,9 @@
 			<li class="nav-li"><a href="{% url 'login' %}">Login</a> </li>
 			<li class="nav-li"><a href="{% url 'register' %}">Register</a> </li>
 		{% else %}
-
-        <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
-        <p style="float:right; color: white;">&nbsp;&nbsp;&nbsp;Welcome {{ user.get_full_name }}! &nbsp;&nbsp;&nbsp;</p>
-
-        {% endif %}
+      <p style="float:right; color: red;">&nbsp;&nbsp;&nbsp;Welcome {{ user.get_full_name }}! &nbsp;&nbsp;&nbsp;</p>
+      <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
+    {% endif %}
 
         {% block post_detail_link %}
 		{% endblock %}
