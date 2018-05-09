@@ -77,6 +77,8 @@
                 <button class="search-btn" type="button"><i class="fa fa-search"></i></button>
             </form>
         </li>
+        {% block post_detail_link %}
+		{% endblock %}
 
 		{% if not request.user.is_authenticated %}
 			<li class="nav-li"><a href="{% url 'login' %}">Login</a> </li>
@@ -86,8 +88,6 @@
       <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
     {% endif %}
 
-        {% block post_detail_link %}
-		{% endblock %}
 
 	</ul>
 </nav>
