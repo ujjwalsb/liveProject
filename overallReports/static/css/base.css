@@ -12,6 +12,8 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Gothic+A1);
 
+
+
 /*p {
   margin: 15px;
 }*/
@@ -91,7 +93,8 @@ li {
   margin-right: 1em;
   color: white;
 }
-.social{
+
+.social {
   color: white;
 }
 
@@ -139,7 +142,8 @@ li {
   display: flex;
   align-items: center;
 }
-.nav-li{
+
+.nav-li {
   margin-left: 10px;
 }
 
@@ -158,7 +162,8 @@ li {
   background: none;
   border-radius: 20px;
 }
-.content-wrapper{
+
+.content-wrapper {
   text-align: center;
   padding: 15px;
 }
@@ -357,14 +362,47 @@ a {
   text-decoration: none;
 }
 
-.form {
+
+
+/*login form*/
+.page-title{
   text-align: center;
-  margin: 100;
-  font-size: 15px;
-  padding: 100px 0px;
-  border: 10px solid #d4b343;
-  border-radius: 100px;
+  text-transform: capitalize;
 }
+.login-form-container {
+  margin-top: 150px;
+}
+
+.form-wrapper {
+  max-width: 1170px;
+  margin: 100px auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 450px;
+  margin: auto;
+  border: 1px solid #D3D3D3;
+  padding: 25px;
+  background-color: #fff;
+}
+.form-group{
+  border: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-control{
+  border: none;
+  height: 40px;
+  width: 213px;
+  background-color: #f6f7f8;
+}
+
 
 .form-section label {
   font-size: 25px;
@@ -389,11 +427,10 @@ a {
 
 .controls {
   display: inline-block;
-  padding: 50px;
 }
 
 #hint_id_username {
-  display: inline-block;
+  display: none;
 }
 
 .submit {
