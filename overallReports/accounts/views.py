@@ -26,7 +26,16 @@ def login_view(request):
             return redirect(next)
         return redirect("/")
 
-    return render(request, "form.html", {"object_list": queryset, "form": form, "title": title})
+    context = {
+        "object_list": queryset,
+        "form": form,
+        "title": title,
+        "caption": "New User ?",
+        "link": "Register Here",
+        "account": "register",
+    }
+
+    return render(request, "form.html", context)
 
 
 def register_view(request):
@@ -49,6 +58,9 @@ def register_view(request):
         "object_list": queryset,
         "form": form,
         "title": title,
+        "caption": "Got an account ?",
+        "link": "Login Here",
+        "account": "login",
     }
 
     return render(request, "form.html", context)
