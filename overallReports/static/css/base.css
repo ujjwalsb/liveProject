@@ -65,6 +65,7 @@ li {
 
 .menu-item {
   /* margin-right: 20px;*/
+  padding: 10px;
 }
 
 .main-menu {
@@ -173,7 +174,7 @@ li {
   padding: 18px;
   font-family: 'Gothic A1', sans-serif;
   text-transform: uppercase;
-  color: lightslategray;
+  color: black;
   font-size: 1em;
   text-decoration: none;
   display: block;
@@ -185,8 +186,15 @@ li {
   color: rgba(0, 35, 122, 0.7);
 }
 
+/*.menu-item a:hover:not(.active) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+  padding: 18px;
+}*/
+
 .active {
-  background-color: #ea8989;
+  background-color: #bec7e0;
 }
 
 .header {
@@ -197,6 +205,10 @@ li {
 
 .row {
   margin-top: 140px;
+  z-index: -1000;
+}
+
+.like{
   z-index: -1000;
 }
 

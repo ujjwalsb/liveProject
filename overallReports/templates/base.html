@@ -84,7 +84,7 @@
 			<li class="nav-li"><a href="{% url 'login' %}">Login</a> </li>
 			<li class="nav-li"><a href="{% url 'register' %}">Register</a> </li>
 		{% else %}
-      <p style="float:right; color: red;">&nbsp;&nbsp;&nbsp;Welcome {{ user.username }}! &nbsp;&nbsp;&nbsp;</p>
+      <p style="float:right; color: red; margin: 0px; color: grey;">&nbsp;&nbsp;&nbsp;Welcome {{ user.username }}! &nbsp;&nbsp;&nbsp;</p>
       <li class="nav-li" style="float:right;"><a class="active" href="{% url 'logout' %}">Logout</a> </li>
     {% endif %}
 
