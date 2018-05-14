@@ -20,7 +20,7 @@
 	<div class='leftcolumn-details'>
 		<div class="card">
 			{% if instance.image %}
-			<img src="{{ instance.image.url }}" class="img-responsive" />
+			<img src="{{ instance.image.url }}" class="img-responsive-detail" />
 			{% endif %}
 			<h2>{{title}}
 				<small> {% if instance.draft %}
@@ -38,7 +38,7 @@
 
 
 			<p>
-			<div class="fb-like like" data-href="{{ request.build_absolute_uri }}"
+			<div class="like fb-like" data-href="{{ request.build_absolute_uri }}"
 				data-layout="button_count" data-action="like" data-size="small"
 				data-show-faces="true" data-share="true">
 			</div>

@@ -244,6 +244,7 @@ li {
   height: 600px;
   background-color: lightgray;
   padding-top: 300px;
+  text-align: center;
 }
 
 .create-leftcolumn {
@@ -266,6 +267,11 @@ li {
 .img-responsive {
   width: 100%;
   padding: 5px;
+}
+
+.img-responsive-detail {
+  width: 50%;
+  padding: 10px;
 }
 
 .rightcolumn {
